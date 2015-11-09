@@ -1,0 +1,4867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="src">
+        <df name="anvil">
+          <in>anvil.c</in>
+        </df>
+        <df name="bounce">
+          <in>bounce.c</in>
+          <in>bounce_append_service.c</in>
+          <in>bounce_cleanup.c</in>
+          <in>bounce_notify_service.c</in>
+          <in>bounce_notify_util.c</in>
+          <in>bounce_notify_verp.c</in>
+          <in>bounce_one_service.c</in>
+          <in>bounce_template.c</in>
+          <in>bounce_templates.c</in>
+          <in>bounce_trace_service.c</in>
+          <in>bounce_warn_service.c</in>
+        </df>
+        <df name="cleanup">
+          <in>cleanup.c</in>
+          <in>cleanup_addr.c</in>
+          <in>cleanup_api.c</in>
+          <in>cleanup_body_edit.c</in>
+          <in>cleanup_bounce.c</in>
+          <in>cleanup_envelope.c</in>
+          <in>cleanup_extracted.c</in>
+          <in>cleanup_final.c</in>
+          <in>cleanup_init.c</in>
+          <in>cleanup_map11.c</in>
+          <in>cleanup_map1n.c</in>
+          <in>cleanup_masquerade.c</in>
+          <in>cleanup_message.c</in>
+          <in>cleanup_milter.c</in>
+          <in>cleanup_out.c</in>
+          <in>cleanup_out_recipient.c</in>
+          <in>cleanup_region.c</in>
+          <in>cleanup_rewrite.c</in>
+          <in>cleanup_state.c</in>
+        </df>
+        <df name="discard">
+          <in>discard.c</in>
+        </df>
+        <df name="dns">
+          <in>dns_lookup.c</in>
+          <in>dns_rr.c</in>
+          <in>dns_rr_eq_sa.c</in>
+          <in>dns_rr_filter.c</in>
+          <in>dns_rr_to_pa.c</in>
+          <in>dns_rr_to_sa.c</in>
+          <in>dns_sa_to_rr.c</in>
+          <in>dns_strerror.c</in>
+          <in>dns_strrecord.c</in>
+          <in>dns_strtype.c</in>
+        </df>
+        <df name="dnsblog">
+          <in>dnsblog.c</in>
+        </df>
+        <df name="error">
+          <in>error.c</in>
+        </df>
+        <df name="flush">
+          <in>flush.c</in>
+        </df>
+        <df name="fsstone">
+          <in>fsstone.c</in>
+        </df>
+        <df name="global">
+          <in>abounce.c</in>
+          <in>addr_match_list.c</in>
+          <in>anvil_clnt.c</in>
+          <in>attr_override.c</in>
+          <in>been_here.c</in>
+          <in>bounce.c</in>
+          <in>bounce_log.c</in>
+          <in>canon_addr.c</in>
+          <in>cfg_parser.c</in>
+          <in>cleanup_strerror.c</in>
+          <in>cleanup_strflags.c</in>
+          <in>clnt_stream.c</in>
+          <in>conv_time.c</in>
+          <in>data_redirect.c</in>
+          <in>db_common.c</in>
+          <in>debug_peer.c</in>
+          <in>debug_process.c</in>
+          <in>defer.c</in>
+          <in>deliver_completed.c</in>
+          <in>deliver_flock.c</in>
+          <in>deliver_pass.c</in>
+          <in>deliver_request.c</in>
+          <in>delivered_hdr.c</in>
+          <in>dict_ldap.c</in>
+          <in>dict_memcache.c</in>
+          <in>dict_mysql.c</in>
+          <in>dict_pgsql.c</in>
+          <in>dict_proxy.c</in>
+          <in>dict_sqlite.c</in>
+          <in>domain_list.c</in>
+          <in>dot_lockfile.c</in>
+          <in>dot_lockfile_as.c</in>
+          <in>dsb_scan.c</in>
+          <in>dsn.c</in>
+          <in>dsn_buf.c</in>
+          <in>dsn_filter.c</in>
+          <in>dsn_mask.c</in>
+          <in>dsn_print.c</in>
+          <in>dsn_util.c</in>
+          <in>dynamicmaps.c</in>
+          <in>ehlo_mask.c</in>
+          <in>ext_prop.c</in>
+          <in>file_id.c</in>
+          <in>flush_clnt.c</in>
+          <in>fold_addr.c</in>
+          <in>haproxy_srvr.c</in>
+          <in>header_body_checks.c</in>
+          <in>header_opts.c</in>
+          <in>header_token.c</in>
+          <in>input_transp.c</in>
+          <in>int_filt.c</in>
+          <in>is_header.c</in>
+          <in>log_adhoc.c</in>
+          <in>mail_addr.c</in>
+          <in>mail_addr_crunch.c</in>
+          <in>mail_addr_find.c</in>
+          <in>mail_addr_map.c</in>
+          <in>mail_command_client.c</in>
+          <in>mail_command_server.c</in>
+          <in>mail_conf.c</in>
+          <in>mail_conf_bool.c</in>
+          <in>mail_conf_int.c</in>
+          <in>mail_conf_long.c</in>
+          <in>mail_conf_nbool.c</in>
+          <in>mail_conf_nint.c</in>
+          <in>mail_conf_raw.c</in>
+          <in>mail_conf_str.c</in>
+          <in>mail_conf_time.c</in>
+          <in>mail_connect.c</in>
+          <in>mail_copy.c</in>
+          <in>mail_date.c</in>
+          <in>mail_dict.c</in>
+          <in>mail_error.c</in>
+          <in>mail_flush.c</in>
+          <in>mail_open_ok.c</in>
+          <in>mail_params.c</in>
+          <in>mail_parm_split.c</in>
+          <in>mail_pathname.c</in>
+          <in>mail_queue.c</in>
+          <in>mail_run.c</in>
+          <in>mail_scan_dir.c</in>
+          <in>mail_stream.c</in>
+          <in>mail_task.c</in>
+          <in>mail_trigger.c</in>
+          <in>mail_version.c</in>
+          <in>maps.c</in>
+          <in>mark_corrupt.c</in>
+          <in>match_parent_style.c</in>
+          <in>match_service.c</in>
+          <in>mbox_conf.c</in>
+          <in>mbox_open.c</in>
+          <in>memcache_proto.c</in>
+          <in>midna_adomain.c</in>
+          <in>mime_state.c</in>
+          <in>mkmap_cdb.c</in>
+          <in>mkmap_db.c</in>
+          <in>mkmap_dbm.c</in>
+          <in>mkmap_fail.c</in>
+          <in>mkmap_lmdb.c</in>
+          <in>mkmap_open.c</in>
+          <in>mkmap_proxy.c</in>
+          <in>mkmap_sdbm.c</in>
+          <in>msg_stats_print.c</in>
+          <in>msg_stats_scan.c</in>
+          <in>mynetworks.c</in>
+          <in>mypwd.c</in>
+          <in>namadr_list.c</in>
+          <in>off_cvt.c</in>
+          <in>opened.c</in>
+          <in>own_inet_addr.c</in>
+          <in>pipe_command.c</in>
+          <in>post_mail.c</in>
+          <in>quote_821_local.c</in>
+          <in>quote_822_local.c</in>
+          <in>rcpt_buf.c</in>
+          <in>rcpt_print.c</in>
+          <in>rec_attr_map.c</in>
+          <in>rec_streamlf.c</in>
+          <in>rec_type.c</in>
+          <in>recipient_list.c</in>
+          <in>record.c</in>
+          <in>remove.c</in>
+          <in>resolve_clnt.c</in>
+          <in>resolve_local.c</in>
+          <in>rewrite_clnt.c</in>
+          <in>safe_ultostr.c</in>
+          <in>scache_clnt.c</in>
+          <in>scache_multi.c</in>
+          <in>scache_single.c</in>
+          <in>sent.c</in>
+          <in>server_acl.c</in>
+          <in>smtp_reply_footer.c</in>
+          <in>smtp_stream.c</in>
+          <in>smtputf8.c</in>
+          <in>split_addr.c</in>
+          <in>string_list.c</in>
+          <in>strip_addr.c</in>
+          <in>sys_exits.c</in>
+          <in>timed_ipc.c</in>
+          <in>tok822_find.c</in>
+          <in>tok822_node.c</in>
+          <in>tok822_parse.c</in>
+          <in>tok822_resolve.c</in>
+          <in>tok822_rewrite.c</in>
+          <in>tok822_tree.c</in>
+          <in>trace.c</in>
+          <in>user_acl.c</in>
+          <in>uxtext.c</in>
+          <in>valid_mailhost_addr.c</in>
+          <in>verify.c</in>
+          <in>verify_clnt.c</in>
+          <in>verify_sender_addr.c</in>
+          <in>verp_sender.c</in>
+          <in>wildcard_inet_addr.c</in>
+          <in>xtext.c</in>
+        </df>
+        <df name="local">
+          <in>alias.c</in>
+          <in>biff_notify.c</in>
+          <in>bounce_workaround.c</in>
+          <in>command.c</in>
+          <in>deliver_attr.c</in>
+          <in>dotforward.c</in>
+          <in>file.c</in>
+          <in>forward.c</in>
+          <in>include.c</in>
+          <in>indirect.c</in>
+          <in>local.c</in>
+          <in>local_expand.c</in>
+          <in>mailbox.c</in>
+          <in>maildir.c</in>
+          <in>recipient.c</in>
+          <in>resolve.c</in>
+          <in>token.c</in>
+          <in>unknown.c</in>
+        </df>
+        <df name="master">
+          <in>event_server.c</in>
+          <in>mail_flow.c</in>
+          <in>master.c</in>
+          <in>master_avail.c</in>
+          <in>master_conf.c</in>
+          <in>master_ent.c</in>
+          <in>master_flow.c</in>
+          <in>master_listen.c</in>
+          <in>master_monitor.c</in>
+          <in>master_proto.c</in>
+          <in>master_service.c</in>
+          <in>master_sig.c</in>
+          <in>master_spawn.c</in>
+          <in>master_status.c</in>
+          <in>master_vars.c</in>
+          <in>master_wakeup.c</in>
+          <in>master_watch.c</in>
+          <in>multi_server.c</in>
+          <in>single_server.c</in>
+          <in>trigger_server.c</in>
+        </df>
+        <df name="milter">
+          <in>milter.c</in>
+          <in>milter8.c</in>
+          <in>milter_macros.c</in>
+        </df>
+        <df name="oqmgr">
+          <in>qmgr.c</in>
+          <in>qmgr_active.c</in>
+          <in>qmgr_bounce.c</in>
+          <in>qmgr_defer.c</in>
+          <in>qmgr_deliver.c</in>
+          <in>qmgr_enable.c</in>
+          <in>qmgr_entry.c</in>
+          <in>qmgr_error.c</in>
+          <in>qmgr_feedback.c</in>
+          <in>qmgr_message.c</in>
+          <in>qmgr_move.c</in>
+          <in>qmgr_queue.c</in>
+          <in>qmgr_scan.c</in>
+          <in>qmgr_transport.c</in>
+        </df>
+        <df name="pickup">
+          <in>pickup.c</in>
+        </df>
+        <df name="pipe">
+          <in>pipe.c</in>
+        </df>
+        <df name="postalias">
+          <in>postalias.c</in>
+        </df>
+        <df name="postcat">
+          <in>postcat.c</in>
+        </df>
+        <df name="postconf">
+          <in>postconf.c</in>
+          <in>postconf_builtin.c</in>
+          <in>postconf_dbms.c</in>
+          <in>postconf_edit.c</in>
+          <in>postconf_lookup.c</in>
+          <in>postconf_main.c</in>
+          <in>postconf_master.c</in>
+          <in>postconf_match.c</in>
+          <in>postconf_misc.c</in>
+          <in>postconf_node.c</in>
+          <in>postconf_other.c</in>
+          <in>postconf_print.c</in>
+          <in>postconf_service.c</in>
+          <in>postconf_unused.c</in>
+          <in>postconf_user.c</in>
+        </df>
+        <df name="postdrop">
+          <in>postdrop.c</in>
+        </df>
+        <df name="postfix">
+          <in>postfix.c</in>
+        </df>
+        <df name="postkick">
+          <in>postkick.c</in>
+        </df>
+        <df name="postlock">
+          <in>postlock.c</in>
+        </df>
+        <df name="postlog">
+          <in>postlog.c</in>
+        </df>
+        <df name="postmap">
+          <in>postmap.c</in>
+        </df>
+        <df name="postmulti">
+          <in>postmulti.c</in>
+        </df>
+        <df name="postqueue">
+          <in>postqueue.c</in>
+        </df>
+        <df name="postscreen">
+          <in>postscreen.c</in>
+          <in>postscreen_dict.c</in>
+          <in>postscreen_dnsbl.c</in>
+          <in>postscreen_early.c</in>
+          <in>postscreen_endpt.c</in>
+          <in>postscreen_expand.c</in>
+          <in>postscreen_haproxy.c</in>
+          <in>postscreen_misc.c</in>
+          <in>postscreen_send.c</in>
+          <in>postscreen_smtpd.c</in>
+          <in>postscreen_starttls.c</in>
+          <in>postscreen_state.c</in>
+          <in>postscreen_tests.c</in>
+        </df>
+        <df name="postsuper">
+          <in>postsuper.c</in>
+        </df>
+        <df name="posttls-finger">
+          <in>posttls-finger.c</in>
+          <in>tlsmgrmem.c</in>
+        </df>
+        <df name="proxymap">
+          <in>proxymap.c</in>
+        </df>
+        <df name="qmgr">
+          <in>qmgr.c</in>
+          <in>qmgr_active.c</in>
+          <in>qmgr_bounce.c</in>
+          <in>qmgr_defer.c</in>
+          <in>qmgr_deliver.c</in>
+          <in>qmgr_enable.c</in>
+          <in>qmgr_entry.c</in>
+          <in>qmgr_error.c</in>
+          <in>qmgr_feedback.c</in>
+          <in>qmgr_job.c</in>
+          <in>qmgr_message.c</in>
+          <in>qmgr_move.c</in>
+          <in>qmgr_peer.c</in>
+          <in>qmgr_queue.c</in>
+          <in>qmgr_scan.c</in>
+          <in>qmgr_transport.c</in>
+        </df>
+        <df name="qmqpd">
+          <in>qmqpd.c</in>
+          <in>qmqpd_peer.c</in>
+          <in>qmqpd_state.c</in>
+        </df>
+        <df name="scache">
+          <in>scache.c</in>
+        </df>
+        <df name="sendmail">
+          <in>sendmail.c</in>
+        </df>
+        <df name="showq">
+          <in>showq.c</in>
+        </df>
+        <df name="smtp">
+          <in>smtp.c</in>
+          <in>smtp_addr.c</in>
+          <in>smtp_chat.c</in>
+          <in>smtp_connect.c</in>
+          <in>smtp_key.c</in>
+          <in>smtp_map11.c</in>
+          <in>smtp_proto.c</in>
+          <in>smtp_rcpt.c</in>
+          <in>smtp_reuse.c</in>
+          <in>smtp_sasl_auth_cache.c</in>
+          <in>smtp_sasl_glue.c</in>
+          <in>smtp_sasl_proto.c</in>
+          <in>smtp_session.c</in>
+          <in>smtp_state.c</in>
+          <in>smtp_tls_policy.c</in>
+          <in>smtp_trouble.c</in>
+        </df>
+        <df name="smtpd">
+          <in>smtpd.c</in>
+          <in>smtpd_chat.c</in>
+          <in>smtpd_check.c</in>
+          <in>smtpd_dsn_fix.c</in>
+          <in>smtpd_expand.c</in>
+          <in>smtpd_haproxy.c</in>
+          <in>smtpd_milter.c</in>
+          <in>smtpd_peer.c</in>
+          <in>smtpd_proxy.c</in>
+          <in>smtpd_resolve.c</in>
+          <in>smtpd_sasl_glue.c</in>
+          <in>smtpd_sasl_proto.c</in>
+          <in>smtpd_state.c</in>
+          <in>smtpd_token.c</in>
+          <in>smtpd_xforward.c</in>
+        </df>
+        <df name="smtpstone">
+          <in>qmqp-sink.c</in>
+          <in>qmqp-source.c</in>
+          <in>smtp-sink.c</in>
+          <in>smtp-source.c</in>
+        </df>
+        <df name="spawn">
+          <in>spawn.c</in>
+        </df>
+        <df name="tls">
+          <in>tls_bio_ops.c</in>
+          <in>tls_certkey.c</in>
+          <in>tls_client.c</in>
+          <in>tls_dane.c</in>
+          <in>tls_dh.c</in>
+          <in>tls_fprint.c</in>
+          <in>tls_level.c</in>
+          <in>tls_mgr.c</in>
+          <in>tls_misc.c</in>
+          <in>tls_prng_dev.c</in>
+          <in>tls_prng_egd.c</in>
+          <in>tls_prng_exch.c</in>
+          <in>tls_prng_file.c</in>
+          <in>tls_proxy_clnt.c</in>
+          <in>tls_proxy_print.c</in>
+          <in>tls_proxy_scan.c</in>
+          <in>tls_rsa.c</in>
+          <in>tls_scache.c</in>
+          <in>tls_seed.c</in>
+          <in>tls_server.c</in>
+          <in>tls_session.c</in>
+          <in>tls_stream.c</in>
+          <in>tls_verify.c</in>
+        </df>
+        <df name="tlsmgr">
+          <in>tlsmgr.c</in>
+        </df>
+        <df name="tlsproxy">
+          <in>tlsproxy.c</in>
+          <in>tlsproxy_state.c</in>
+        </df>
+        <df name="trivial-rewrite">
+          <in>resolve.c</in>
+          <in>rewrite.c</in>
+          <in>transport.c</in>
+          <in>trivial-rewrite.c</in>
+        </df>
+        <df name="util">
+          <in>allascii.c</in>
+          <in>alldig.c</in>
+          <in>allprint.c</in>
+          <in>allspace.c</in>
+          <in>argv.c</in>
+          <in>argv_split.c</in>
+          <in>argv_splitq.c</in>
+          <in>attr_clnt.c</in>
+          <in>attr_print0.c</in>
+          <in>attr_print64.c</in>
+          <in>attr_print_plain.c</in>
+          <in>attr_scan0.c</in>
+          <in>attr_scan64.c</in>
+          <in>attr_scan_plain.c</in>
+          <in>auto_clnt.c</in>
+          <in>balpar.c</in>
+          <in>base32_code.c</in>
+          <in>base64_code.c</in>
+          <in>basename.c</in>
+          <in>binhash.c</in>
+          <in>casefold.c</in>
+          <in>chroot_uid.c</in>
+          <in>cidr_match.c</in>
+          <in>clean_env.c</in>
+          <in>close_on_exec.c</in>
+          <in>concatenate.c</in>
+          <in>ctable.c</in>
+          <in>dict.c</in>
+          <in>dict_alloc.c</in>
+          <in>dict_cache.c</in>
+          <in>dict_cdb.c</in>
+          <in>dict_cidr.c</in>
+          <in>dict_db.c</in>
+          <in>dict_dbm.c</in>
+          <in>dict_debug.c</in>
+          <in>dict_env.c</in>
+          <in>dict_fail.c</in>
+          <in>dict_ht.c</in>
+          <in>dict_inline.c</in>
+          <in>dict_lmdb.c</in>
+          <in>dict_ni.c</in>
+          <in>dict_nis.c</in>
+          <in>dict_nisplus.c</in>
+          <in>dict_open.c</in>
+          <in>dict_pcre.c</in>
+          <in>dict_pipe.c</in>
+          <in>dict_random.c</in>
+          <in>dict_regexp.c</in>
+          <in>dict_sdbm.c</in>
+          <in>dict_sockmap.c</in>
+          <in>dict_static.c</in>
+          <in>dict_surrogate.c</in>
+          <in>dict_tcp.c</in>
+          <in>dict_test.c</in>
+          <in>dict_thash.c</in>
+          <in>dict_union.c</in>
+          <in>dict_unix.c</in>
+          <in>dict_utf8.c</in>
+          <in>dir_forest.c</in>
+          <in>doze.c</in>
+          <in>dummy_read.c</in>
+          <in>dummy_write.c</in>
+          <in>duplex_pipe.c</in>
+          <in>edit_file.c</in>
+          <in>environ.c</in>
+          <in>events.c</in>
+          <in>exec_command.c</in>
+          <in>extpar.c</in>
+          <in>fifo_listen.c</in>
+          <in>fifo_trigger.c</in>
+          <in>file_limit.c</in>
+          <in>find_inet.c</in>
+          <in>format_tv.c</in>
+          <in>fsspace.c</in>
+          <in>fullname.c</in>
+          <in>get_domainname.c</in>
+          <in>get_hostname.c</in>
+          <in>hex_code.c</in>
+          <in>hex_quote.c</in>
+          <in>host_port.c</in>
+          <in>htable.c</in>
+          <in>inet_addr_host.c</in>
+          <in>inet_addr_list.c</in>
+          <in>inet_addr_local.c</in>
+          <in>inet_connect.c</in>
+          <in>inet_listen.c</in>
+          <in>inet_proto.c</in>
+          <in>inet_trigger.c</in>
+          <in>inet_windowsize.c</in>
+          <in>ip_match.c</in>
+          <in>killme_after.c</in>
+          <in>line_number.c</in>
+          <in>line_wrap.c</in>
+          <in>load_file.c</in>
+          <in>load_lib.c</in>
+          <in>lowercase.c</in>
+          <in>lstat_as.c</in>
+          <in>mac_expand.c</in>
+          <in>mac_parse.c</in>
+          <in>make_dirs.c</in>
+          <in>mask_addr.c</in>
+          <in>match_list.c</in>
+          <in>match_ops.c</in>
+          <in>midna_domain.c</in>
+          <in>msg.c</in>
+          <in>msg_output.c</in>
+          <in>msg_rate_delay.c</in>
+          <in>msg_syslog.c</in>
+          <in>msg_vstream.c</in>
+          <in>mvect.c</in>
+          <in>myaddrinfo.c</in>
+          <in>myflock.c</in>
+          <in>mymalloc.c</in>
+          <in>myrand.c</in>
+          <in>mystrtok.c</in>
+          <in>name_code.c</in>
+          <in>name_mask.c</in>
+          <in>nbbio.c</in>
+          <in>netstring.c</in>
+          <in>neuter.c</in>
+          <in>non_blocking.c</in>
+          <in>nvtable.c</in>
+          <in>open_as.c</in>
+          <in>open_limit.c</in>
+          <in>open_lock.c</in>
+          <in>pass_accept.c</in>
+          <in>pass_trigger.c</in>
+          <in>peekfd.c</in>
+          <in>percentm.c</in>
+          <in>poll_fd.c</in>
+          <in>posix_signals.c</in>
+          <in>printable.c</in>
+          <in>rand_sleep.c</in>
+          <in>readlline.c</in>
+          <in>recv_pass_attr.c</in>
+          <in>ring.c</in>
+          <in>safe_getenv.c</in>
+          <in>safe_open.c</in>
+          <in>sane_accept.c</in>
+          <in>sane_basename.c</in>
+          <in>sane_connect.c</in>
+          <in>sane_link.c</in>
+          <in>sane_rename.c</in>
+          <in>sane_socketpair.c</in>
+          <in>sane_time.c</in>
+          <in>scan_dir.c</in>
+          <in>set_eugid.c</in>
+          <in>set_ugid.c</in>
+          <in>sigdelay.c</in>
+          <in>skipblanks.c</in>
+          <in>slmdb.c</in>
+          <in>sock_addr.c</in>
+          <in>spawn_command.c</in>
+          <in>split_at.c</in>
+          <in>split_nameval.c</in>
+          <in>stat_as.c</in>
+          <in>strcasecmp_utf8.c</in>
+          <in>stream_connect.c</in>
+          <in>stream_listen.c</in>
+          <in>stream_recv_fd.c</in>
+          <in>stream_send_fd.c</in>
+          <in>stream_trigger.c</in>
+          <in>sys_compat.c</in>
+          <in>timecmp.c</in>
+          <in>timed_connect.c</in>
+          <in>timed_read.c</in>
+          <in>timed_wait.c</in>
+          <in>timed_write.c</in>
+          <in>translit.c</in>
+          <in>trimblanks.c</in>
+          <in>unescape.c</in>
+          <in>unix_connect.c</in>
+          <in>unix_listen.c</in>
+          <in>unix_pass_fd_fix.c</in>
+          <in>unix_recv_fd.c</in>
+          <in>unix_send_fd.c</in>
+          <in>unix_trigger.c</in>
+          <in>unsafe.c</in>
+          <in>uppercase.c</in>
+          <in>username.c</in>
+          <in>valid_hostname.c</in>
+          <in>valid_utf8_hostname.c</in>
+          <in>valid_utf8_string.c</in>
+          <in>vbuf.c</in>
+          <in>vbuf_print.c</in>
+          <in>vstream.c</in>
+          <in>vstream_popen.c</in>
+          <in>vstream_tweak.c</in>
+          <in>vstring.c</in>
+          <in>vstring_vstream.c</in>
+          <in>warn_stat.c</in>
+          <in>watchdog.c</in>
+          <in>write_buf.c</in>
+        </df>
+        <df name="verify">
+          <in>verify.c</in>
+        </df>
+        <df name="virtual">
+          <in>deliver_attr.c</in>
+          <in>mailbox.c</in>
+          <in>maildir.c</in>
+          <in>recipient.c</in>
+          <in>unknown.c</in>
+          <in>virtual.c</in>
+        </df>
+        <df name="xsasl">
+          <in>xsasl_client.c</in>
+          <in>xsasl_cyrus_client.c</in>
+          <in>xsasl_cyrus_log.c</in>
+          <in>xsasl_cyrus_security.c</in>
+          <in>xsasl_cyrus_server.c</in>
+          <in>xsasl_dovecot_server.c</in>
+          <in>xsasl_server.c</in>
+        </df>
+      </df>
+      <in>postfixNotlari.txt</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-g"/>
+        <element flagsID="1" commonFlags="-mtune=generic -march=x86-64 -g"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>src/sendmail/sendmail</executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <folder path="0/src/anvil">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/anvil</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/bounce">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/bounce</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/cleanup">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/cleanup</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/discard">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/discard</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/dnsblog">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/dnsblog</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/error">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/error</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/flush">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/flush</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/fsstone">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/fsstone</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/local">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/local</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/milter">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/milter</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/oqmgr">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/oqmgr</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/pickup">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/pickup</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/pipe">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/pipe</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postalias">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postalias</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postcat">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postcat</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postconf">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postconf</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postdrop">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postdrop</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postfix">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postfix</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postkick">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postkick</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postlock">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postlock</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postlog">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postlog</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postmap">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postmap</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postmulti">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postmulti</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postqueue">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postqueue</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postscreen">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postscreen</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/postsuper">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/postsuper</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/proxymap">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/proxymap</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/qmgr">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/qmgr</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/qmqpd">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/qmqpd</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/scache">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/scache</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/sendmail">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/sendmail</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/showq">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/showq</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/smtpstone">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpstone</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/spawn">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/spawn</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/tlsmgr">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/tlsmgr</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/trivial-rewrite">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/trivial-rewrite</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/verify">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/verify</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/virtual">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/virtual</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="postfixNotlari.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/anvil/anvil.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce_append_service.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce_cleanup.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce_notify_service.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce_notify_util.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce_notify_verp.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce_one_service.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce_template.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce_templates.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce_trace_service.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/bounce/bounce_warn_service.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_api.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_body_edit.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_bounce.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_envelope.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_extracted.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_final.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_init.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_map11.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_map1n.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_masquerade.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_message.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_milter.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_out.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_out_recipient.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_region.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_rewrite.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cleanup/cleanup_state.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/discard/discard.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/dns/dns_lookup.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/dns</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/dns/dns_rr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/dns</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/dns/dns_rr_eq_sa.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/dns</pElem>
+            <pElem>include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/dns/dns_rr_filter.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/dns</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/dns/dns_rr_to_pa.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/dns</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/dns/dns_rr_to_sa.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/dns</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/dns/dns_sa_to_rr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/dns</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/dns/dns_strerror.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/dns</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/dns/dns_strrecord.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/dns</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/dns/dns_strtype.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/dns</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/dnsblog/dnsblog.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/error/error.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/flush/flush.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/fsstone/fsstone.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/abounce.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/addr_match_list.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/anvil_clnt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/attr_override.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/been_here.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/bounce.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/bounce_log.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/canon_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/cfg_parser.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/cleanup_strerror.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+            <pElem>include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/cleanup_strflags.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/clnt_stream.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/conv_time.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/data_redirect.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/db_common.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/debug_peer.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/debug_process.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/defer.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/deliver_completed.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/deliver_flock.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/deliver_pass.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/deliver_request.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/delivered_hdr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dict_ldap.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/dict_memcache.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dict_mysql.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/dict_pgsql.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/dict_proxy.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dict_sqlite.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/domain_list.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/dot_lockfile.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dot_lockfile_as.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dsb_scan.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dsn.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+            <pElem>include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dsn_buf.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dsn_filter.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dsn_mask.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dsn_print.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dsn_util.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+            <pElem>include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/dynamicmaps.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/ehlo_mask.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/ext_prop.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/file_id.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/flush_clnt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/fold_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/haproxy_srvr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/header_body_checks.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/header_opts.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/header_token.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/input_transp.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/int_filt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/is_header.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/log_adhoc.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_addr_crunch.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_addr_find.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_addr_map.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_command_client.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_command_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_conf.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_conf_bool.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_conf_int.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_conf_long.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_conf_nbool.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_conf_nint.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_conf_raw.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_conf_str.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_conf_time.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_connect.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_copy.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_date.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_dict.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_error.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_flush.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_open_ok.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_params.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_parm_split.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_pathname.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_queue.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_run.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_scan_dir.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_stream.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_task.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_trigger.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mail_version.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+            <pElem>include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/maps.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mark_corrupt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/match_parent_style.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/match_service.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mbox_conf.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mbox_open.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/memcache_proto.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/midna_adomain.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mime_state.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mkmap_cdb.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/mkmap_db.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mkmap_dbm.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/mkmap_fail.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mkmap_lmdb.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/mkmap_open.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mkmap_proxy.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mkmap_sdbm.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/msg_stats_print.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/msg_stats_scan.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mynetworks.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/mypwd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/namadr_list.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/off_cvt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/opened.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/own_inet_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/pipe_command.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/post_mail.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/quote_821_local.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/quote_822_local.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/rcpt_buf.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/rcpt_print.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/rec_attr_map.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/rec_streamlf.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/rec_type.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/recipient_list.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/record.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/remove.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/resolve_clnt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/resolve_local.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/rewrite_clnt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/safe_ultostr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/scache_clnt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/scache_multi.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/scache_single.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/sent.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/server_acl.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/smtp_reply_footer.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/smtp_stream.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/smtputf8.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/split_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+            <pElem>include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/string_list.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/global/strip_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/sys_exits.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/timed_ipc.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/tok822_find.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/tok822_node.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/tok822_parse.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/tok822_resolve.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/tok822_rewrite.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/tok822_tree.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/trace.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/user_acl.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/uxtext.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/valid_mailhost_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/verify.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/global</pElem>
+            <pElem>include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/verify_clnt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/verify_sender_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/verp_sender.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/wildcard_inet_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/global/xtext.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/global</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/local/alias.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/biff_notify.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/bounce_workaround.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/command.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/deliver_attr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/dotforward.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/file.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/forward.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/include.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/indirect.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/local.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/local_expand.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/mailbox.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/maildir.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/recipient.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/resolve.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/token.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/local/unknown.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/master/event_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/mail_flow.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_avail.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_conf.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_ent.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_flow.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_listen.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_monitor.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_proto.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_service.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_sig.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_spawn.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_status.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_vars.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_wakeup.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/master_watch.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/multi_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/single_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/master/trigger_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/master</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/milter/milter.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/milter/milter8.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/milter/milter_macros.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_active.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_bounce.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_defer.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_deliver.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_enable.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_entry.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_error.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_feedback.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_message.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_move.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_queue.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_scan.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/oqmgr/qmgr_transport.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/pickup/pickup.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/pipe/pipe.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postalias/postalias.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postcat/postcat.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_builtin.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_dbms.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_edit.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_lookup.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_main.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_master.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_match.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_misc.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_node.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_other.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_print.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_service.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_unused.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postconf/postconf_user.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postdrop/postdrop.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postfix/postfix.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postkick/postkick.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postlock/postlock.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postlog/postlog.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postmap/postmap.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postmulti/postmulti.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postqueue/postqueue.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_dict.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_dnsbl.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_early.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_endpt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_expand.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_haproxy.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_misc.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_send.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_smtpd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_starttls.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_state.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postscreen/postscreen_tests.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/postsuper/postsuper.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/posttls-finger/posttls-finger.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/posttls-finger</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/posttls-finger/tlsmgrmem.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/proxymap/proxymap.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_active.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_bounce.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_defer.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_deliver.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_enable.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_entry.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_error.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_feedback.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_job.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_message.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_move.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_peer.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_queue.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_scan.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmgr/qmgr_transport.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmqpd/qmqpd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmqpd/qmqpd_peer.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/qmqpd/qmqpd_state.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/scache/scache.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/sendmail/sendmail.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/showq/showq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_chat.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_connect.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_key.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_map11.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_proto.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_rcpt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_reuse.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_sasl_auth_cache.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_sasl_glue.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_sasl_proto.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_session.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_state.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_tls_policy.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/smtp/smtp_trouble.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_chat.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_check.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_dsn_fix.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_expand.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_haproxy.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_milter.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_peer.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_proxy.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_resolve.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_sasl_glue.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_sasl_proto.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_state.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_token.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpd/smtpd_xforward.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/smtpd</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/smtpstone/qmqp-sink.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/smtpstone/qmqp-source.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/smtpstone/smtp-sink.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/smtpstone/smtp-source.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/spawn/spawn.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_bio_ops.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_certkey.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_client.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_dane.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_dh.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_fprint.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_level.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/tls</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/tls/tls_mgr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_misc.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/tls</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/tls/tls_prng_dev.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_prng_egd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_prng_exch.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_prng_file.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_proxy_clnt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>src/tls</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DEF_SHLIB_DIR="no"</Elem>
+            <Elem>HAS_PCRE</Elem>
+            <Elem>LINUX4</Elem>
+            <Elem>SNAPSHOT</Elem>
+            <Elem>U_HAVE_ATOMIC=1</Elem>
+            <Elem>U_HAVE_ELF_H=1</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+          <undefinedList>
+            <Elem>USE_DYNAMIC_LIBS</Elem>
+            <Elem>USE_DYNAMIC_MAPS</Elem>
+          </undefinedList>
+        </cTool>
+      </item>
+      <item path="src/tls/tls_proxy_print.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>src/tls</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DEF_SHLIB_DIR="no"</Elem>
+            <Elem>HAS_PCRE</Elem>
+            <Elem>LINUX4</Elem>
+            <Elem>SNAPSHOT</Elem>
+            <Elem>U_HAVE_ATOMIC=1</Elem>
+            <Elem>U_HAVE_ELF_H=1</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+          <undefinedList>
+            <Elem>USE_DYNAMIC_LIBS</Elem>
+            <Elem>USE_DYNAMIC_MAPS</Elem>
+          </undefinedList>
+        </cTool>
+      </item>
+      <item path="src/tls/tls_proxy_scan.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>src/tls</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DEF_SHLIB_DIR="no"</Elem>
+            <Elem>HAS_PCRE</Elem>
+            <Elem>LINUX4</Elem>
+            <Elem>SNAPSHOT</Elem>
+            <Elem>U_HAVE_ATOMIC=1</Elem>
+            <Elem>U_HAVE_ELF_H=1</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+          <undefinedList>
+            <Elem>USE_DYNAMIC_LIBS</Elem>
+            <Elem>USE_DYNAMIC_MAPS</Elem>
+          </undefinedList>
+        </cTool>
+      </item>
+      <item path="src/tls/tls_rsa.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_scache.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_seed.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_session.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_stream.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tls/tls_verify.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tlsmgr/tlsmgr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tlsproxy/tlsproxy.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/tlsproxy</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/tlsproxy/tlsproxy_state.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/trivial-rewrite/resolve.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/trivial-rewrite/rewrite.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/trivial-rewrite/transport.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/trivial-rewrite/trivial-rewrite.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/util/allascii.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/alldig.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/allprint.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/allspace.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/argv.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/argv_split.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/argv_splitq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/attr_clnt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/attr_print0.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/attr_print64.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/attr_print_plain.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/attr_scan0.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/attr_scan64.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/attr_scan_plain.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/auto_clnt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/balpar.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/base32_code.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/base64_code.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/basename.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/binhash.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/casefold.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>/usr/include/unicode</pElem>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/chroot_uid.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/cidr_match.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/clean_env.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/close_on_exec.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/concatenate.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/ctable.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_alloc.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_cache.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_cdb.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/util/dict_cidr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_db.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_dbm.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/util/dict_debug.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_env.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_fail.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_ht.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_inline.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_lmdb.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/util/dict_ni.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/util/dict_nis.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_nisplus.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/util/dict_open.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_pcre.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_pipe.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_random.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_regexp.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_sdbm.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/util/dict_sockmap.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_static.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_surrogate.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_tcp.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_test.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_thash.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_union.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_unix.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dict_utf8.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dir_forest.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/doze.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dummy_read.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/dummy_write.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/duplex_pipe.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/edit_file.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/environ.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/util/events.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/exec_command.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/extpar.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/fifo_listen.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/fifo_trigger.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/file_limit.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/find_inet.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/format_tv.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/fsspace.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/fullname.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/get_domainname.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/get_hostname.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/hex_code.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/hex_quote.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/host_port.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/htable.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/inet_addr_host.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/inet_addr_list.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/inet_addr_local.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/inet_connect.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/inet_listen.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/inet_proto.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/inet_trigger.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/inet_windowsize.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/ip_match.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/killme_after.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/line_number.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/line_wrap.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/load_file.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/load_lib.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/util/lowercase.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/lstat_as.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/mac_expand.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/mac_parse.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/make_dirs.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/mask_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/match_list.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/match_ops.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/midna_domain.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>/usr/include/unicode</pElem>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/msg.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/msg_output.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/msg_rate_delay.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/msg_syslog.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/msg_vstream.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/mvect.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/myaddrinfo.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/myflock.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/mymalloc.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/myrand.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/mystrtok.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/name_code.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/name_mask.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/nbbio.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/netstring.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/neuter.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/non_blocking.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/nvtable.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/open_as.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/open_limit.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/open_lock.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/pass_accept.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/pass_trigger.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/peekfd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/percentm.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/poll_fd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/posix_signals.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/util/printable.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/rand_sleep.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/readlline.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/recv_pass_attr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/ring.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/safe_getenv.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/safe_open.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/sane_accept.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/sane_basename.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/sane_connect.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/sane_link.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/sane_rename.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/sane_socketpair.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/sane_time.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/scan_dir.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/set_eugid.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/set_ugid.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/sigdelay.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/skipblanks.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/slmdb.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>src/util</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DEF_SHLIB_DIR="no"</Elem>
+            <Elem>HAS_PCRE</Elem>
+            <Elem>LINUX4</Elem>
+            <Elem>SNAPSHOT</Elem>
+            <Elem>U_HAVE_ATOMIC=1</Elem>
+            <Elem>U_HAVE_ELF_H=1</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+          <undefinedList>
+            <Elem>USE_DYNAMIC_LIBS</Elem>
+            <Elem>USE_DYNAMIC_MAPS</Elem>
+          </undefinedList>
+        </cTool>
+      </item>
+      <item path="src/util/sock_addr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/spawn_command.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/split_at.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/split_nameval.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/stat_as.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/strcasecmp_utf8.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/stream_connect.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/stream_listen.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/stream_recv_fd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/stream_send_fd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/stream_trigger.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/sys_compat.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/timecmp.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/timed_connect.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/timed_read.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/timed_wait.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/timed_write.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/translit.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/trimblanks.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/unescape.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/unix_connect.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/unix_listen.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/unix_pass_fd_fix.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/unix_recv_fd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/unix_send_fd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/unix_trigger.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/unsafe.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/uppercase.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/username.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/valid_hostname.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/valid_utf8_hostname.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/valid_utf8_string.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/vbuf.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/vbuf_print.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/vstream.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/vstream_popen.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/vstream_tweak.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/vstring.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/vstring_vstream.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/warn_stat.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/watchdog.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/util/write_buf.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/util</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/verify/verify.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/virtual/deliver_attr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/virtual/mailbox.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/virtual/maildir.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/virtual/recipient.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/virtual/unknown.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/virtual/virtual.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/xsasl/xsasl_client.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/xsasl</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/xsasl/xsasl_cyrus_client.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/xsasl/xsasl_cyrus_log.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/xsasl/xsasl_cyrus_security.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/xsasl/xsasl_cyrus_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/xsasl/xsasl_dovecot_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/xsasl/xsasl_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>src/xsasl</pElem>
+          </incDir>
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

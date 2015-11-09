@@ -1,0 +1,46 @@
+# Do not edit -- this file documents how Postfix was built for your machine.
+#----------------------------------------------------------------
+# Start of summary of user-configurable 'make makefiles' options.
+# CCARGS=
+# AUXLIBS=
+# shared=
+# dynamicmaps=
+# pie=
+# End of summary of user-configurable 'make makefiles' options.
+#--------------------------------------------------------------
+# System-dependent settings and compiler/linker overrides.
+SYSTYPE	= LINUX4
+_AR	= ar
+ARFL	= rv
+_RANLIB	= ranlib
+SYSLIBS	= -lpcre -ldb -lnsl -lresolv -ldl -Wl,-z,relro -lpthread -ldl -lm -L/usr/lib64 -licui18n -licuuc -licudata -lpthread -ldl -lm 
+CC	= gcc -I. -I../../include -D_REENTRANT -DU_HAVE_ELF_H=1 -DU_HAVE_ATOMIC=1 -I/usr/include -DHAS_PCRE -DSNAPSHOT -UUSE_DYNAMIC_LIBS -DDEF_SHLIB_DIR=\"no\" -UUSE_DYNAMIC_MAPS $(WARN)
+OPT	= -O
+DEBUG	= -g
+AWK	= awk
+STRCASE = 
+EXPORT	= CCARGS='-I. -I../../include -D_REENTRANT -DU_HAVE_ELF_H=1 -DU_HAVE_ATOMIC=1 -I/usr/include -DHAS_PCRE -DSNAPSHOT -UUSE_DYNAMIC_LIBS -DDEF_SHLIB_DIR=\"no\" -UUSE_DYNAMIC_MAPS' OPT='-O' DEBUG='-g'
+WARN	= -Wall -Wno-comment -Wformat -Wimplicit -Wmissing-prototypes \
+	-Wparentheses -Wstrict-prototypes -Wswitch -Wuninitialized \
+	-Wunused -Wno-missing-braces
+DEFINED_MAP_TYPES = pcre
+MAKE_FIX = 
+# Switch between Postfix static and dynamically-linked libraries.
+AR	= ar
+RANLIB	= ranlib
+LIB_PREFIX = 
+LIB_SUFFIX = .a
+SHLIB_CFLAGS = 
+SHLIB_DIR = no
+SHLIB_ENV = 
+SHLIB_LD = :
+SHLIB_SYSLIBS = 
+SHLIB_RPATH = 
+# Switch between dynamicmaps.cf plugins and hard-linked databases.
+NON_PLUGIN_MAP_OBJ = $(MAP_OBJ)
+PLUGIN_MAP_OBJ = 
+PLUGIN_MAP_OBJ_UPDATE = 
+PLUGIN_MAP_SO_MAKE = 
+PLUGIN_MAP_SO_UPDATE = 
+PLUGIN_LD = 
+# Application-specific rules.
