@@ -1904,7 +1904,8 @@ static int mail_open_stream(SMTPD_STATE *state) {
      * feature.
      */
     if (state->proxy_mail) {
-        msg_warn("HU--Proxy get..");
+        if (msg_verbose)
+            msg_warn("HU--Proxy get..");
         if (smtpd_proxy_create(state, smtpd_proxy_opts, var_smtpd_proxy_filt,
                 var_smtpd_proxy_tmout, var_smtpd_proxy_ehlo,
                 state->proxy_mail) != 0) {
@@ -1912,7 +1913,7 @@ static int mail_open_stream(SMTPD_STATE *state) {
             smtpd_proxy_free(state);
             return (-1);
         }
-    }        /*
+    }/*
          * If running from the master or from inetd, connect to the cleanup
          * service.
          * 
@@ -1940,7 +1941,7 @@ static int mail_open_stream(SMTPD_STATE *state) {
                 ATTR_TYPE_END) != 0)
             msg_fatal("unable to connect to the %s %s service",
                 MAIL_CLASS_PUBLIC, var_cleanup_service);
-    }        /*
+    }/*
          * Otherwise, pipe the message through the privileged postdrop helper.
          * XXX Make postdrop a manifest constant.
          */
@@ -1970,7 +1971,7 @@ static int mail_open_stream(SMTPD_STATE *state) {
      * knows the actual Milter state.
      */
     if (state->dest) {
-        msg_info("HU--Nerdeyiz Desteyiz");
+
         state->cleanup = state->dest->stream;
         state->queue_id = mystrdup(state->dest->id);
         if (SMTPD_STAND_ALONE(state) == 0) {
@@ -1980,10 +1981,12 @@ static int mail_open_stream(SMTPD_STATE *state) {
                 (void) milter_dummy(smtpd_milters, state->cleanup);
             rec_fprintf(state->cleanup, REC_TYPE_TIME, REC_TYPE_TIME_FORMAT,
                     REC_TYPE_TIME_ARG(state->arrival_time));
-            if (*var_filter_xport){
-                msg_info("HU--1)Cleanup %s dfilt var_filter_xport : %s quid:%s",state->cleanup->buf.data,var_filter_xport,state->queue_id);
+            if (*var_filter_xport) {
+                if (msg_verbose)
+                    msg_info("HU--1)Cleanup %s dfilt var_filter_xport : %s quid:%s", state->cleanup->buf.data, var_filter_xport, state->queue_id);
                 rec_fprintf(state->cleanup, REC_TYPE_FILT, "%s", var_filter_xport);
-                msg_info("HU--2)Cleanup %s dfilt var_filter_xport : %s",state->cleanup->buf.data,var_filter_xport);
+                if (msg_verbose)
+                    msg_info("HU--2)Cleanup %s dfilt var_filter_xport : %s", state->cleanup->buf.data, var_filter_xport);
             }
             if (FORWARD_IDENT(state))
                 rec_fprintf(state->cleanup, REC_TYPE_ATTR, "%s=%s",
@@ -2880,8 +2883,8 @@ static int rcpt_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
     state->rcpt_count++;
     if (state->recipient == 0)
         state->recipient = mystrdup(STR(state->addr_buf));
-
-    msg_info("HU--recipient Command : %s -> %d", state->recipient, state->rcpt_count);
+    if (msg_verbose)
+        msg_info("HU--recipient Command : %s -> %d", state->recipient, state->rcpt_count);
 
     if (state->cleanup) {
         /* Note: RFC(2)821 externalized address! */
@@ -2905,7 +2908,8 @@ static int rcpt_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
         vstream_fflush(state->cleanup);
     }
     //HU--
-    msg_info("HU--Recipient Ekliyoruz : %s", state->recipient);
+    if (msg_verbose)
+        msg_info("HU--Add Recipient: %s", state->recipient);
 
     if (state->rcpt_count == 1)
         recipient_list_init(&state->rcpt_list, 1);
@@ -2916,11 +2920,12 @@ static int rcpt_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
             mystrdup(STR(state->addr_buf)));
 
     /*--HU-- --*/
-    msg_info("HU--Recipient Ekledik : %s->%d", mystrdup(STR(state->addr_buf)), state->rcpt_list.len);
-    int i=0;
-    for (i = 0; i < state->rcpt_list.len; i++)
-        msg_info("HU--Recipient Listesi : %s->%d", state->rcpt_list.info[i].address, i);
-
+    if (msg_verbose) {
+        msg_info("HU--Added Recipient: %s->%d", mystrdup(STR(state->addr_buf)), state->rcpt_list.len);
+        int i = 0;
+        for (i = 0; i < state->rcpt_list.len; i++)
+            msg_info("HU--Recipient List : %s->%d", state->rcpt_list.info[i].address, i);
+    }
     smtpd_chat_reply(state, "250 2.1.5 Ok");
     return (0);
 }
@@ -3073,7 +3078,8 @@ static int data_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *unused_argv) {
      * before all recipients are rejected, so don't report that as a protocol
      * error.
      */
-    msg_info("HU--DATA cmd dedyiz");
+    if (msg_verbose)
+        msg_info("HU--Start data_cmd function");
     if (state->rcpt_count == 0) {
         if (!SMTPD_IN_MAIL_TRANSACTION(state)) {
             state->error_mask |= MAIL_ERROR_PROTOCOL;
@@ -3244,7 +3250,7 @@ static int data_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *unused_argv) {
     }
     smtpd_chat_reply(state, "354 End data with <CR><LF>.<CR><LF>");
     state->where = SMTPD_AFTER_DATA;
-    msg_info("HU--Before Data - rcpt count %d: Recipients %s", state->rcpt_count, state->recipient);
+    //msg_info("HU--Before Data - rcpt count %d: Recipients %s", state->rcpt_count, state->recipient);
 
     /*
      * Copy the message content. If the cleanup process has a problem, keep
@@ -3265,7 +3271,8 @@ static int data_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *unused_argv) {
         else
             curr_rec_type = REC_TYPE_CONT;
         start = vstring_str(state->buffer);
-        msg_info("HU--Data-1 : %s", start);
+        if (msg_verbose)
+            msg_info("HU--Data- : %s", start);
         len = VSTRING_LEN(state->buffer);
         if (first) {
             if (strncmp(start + strspn(start, ">"), "From ", 5) == 0) {
@@ -3319,7 +3326,7 @@ static int data_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *unused_argv) {
                     *STR(proxy->reply) != '2')
                 state->err = CLEANUP_STAT_CONT;
         }
-    }        /*
+    }/*
          * Flush out access table actions that are delegated to the cleanup
          * server. There is similar code at the beginning of the DATA command.
          * 
@@ -3868,7 +3875,7 @@ static int xclient_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
                 UPDATE_STR(state->reverse_name, attr_value);
                 state->reverse_name_status = name_status;
             }
-        }            /*
+        }/*
              * REVERSE_NAME=substitute SMTP client reverse hostname. Also updates
              * the client reverse hostname lookup status code.
              */
@@ -3887,7 +3894,7 @@ static int xclient_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
             }
             state->reverse_name_status = name_status;
             UPDATE_STR(state->reverse_name, attr_value);
-        }            /*
+        }/*
              * ADDR=substitute SMTP client network address.
              */
         else if (STREQ(attr_name, XCLIENT_ADDR)) {
@@ -3912,7 +3919,7 @@ static int xclient_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
 #endif
                 state->addr_family = AF_INET;
             update_namaddr = 1;
-        }            /*
+        }/*
              * PORT=substitute SMTP client port number.
              */
         else if (STREQ(attr_name, XCLIENT_PORT)) {
@@ -3929,7 +3936,7 @@ static int xclient_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
             }
             UPDATE_STR(state->port, attr_value);
             update_namaddr = 1;
-        }            /*
+        }/*
              * HELO=substitute SMTP client HELO parameter. Censor special
              * characters that could mess up message headers.
              */
@@ -3947,7 +3954,7 @@ static int xclient_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
             }
             UPDATE_STR(state->helo_name, attr_value);
             got_helo = 1;
-        }            /*
+        }/*
              * PROTO=SMTP protocol name.
              */
         else if (STREQ(attr_name, XCLIENT_PROTO)) {
@@ -3959,7 +3966,7 @@ static int xclient_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
             }
             UPDATE_STR(state->protocol, uppercase(attr_value));
             got_proto = 1;
-        }            /*
+        }/*
              * LOGIN=sasl_username. Sets the authentication method as XCLIENT.
              * This can be used even if SASL authentication is turned off in
              * main.cf. We can't make it easier than that.
@@ -4891,7 +4898,7 @@ static void smtpd_proto(SMTPD_STATE *state) {
                 state->access_denied = mystrdup(err);
                 smtpd_chat_reply(state, "%s", state->access_denied);
                 state->error_count++;
-            }                /*
+            }/*
                  * RFC 2034: the text part of all 2xx, 4xx, and 5xx SMTP responses
                  * other than the initial greeting and any response to HELO or EHLO
                  * are prefaced with a status code as defined in RFC 3463.

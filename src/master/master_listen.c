@@ -116,19 +116,20 @@ void    master_listen_init(MASTER_SERV *serv)
 	 */
     case MASTER_SERV_TYPE_INET:
 	for (n = 0; n < serv->listen_fd_count; n++) {
-            system("echo HU--deneme>>/var/log/maillog");
 	    sa = SOCK_ADDR_PTR(MASTER_INET_ADDRLIST(serv)->addrs + n);
 	    SOCKADDR_TO_HOSTADDR(sa, SOCK_ADDR_LEN(sa), &hostaddr,
 				 (MAI_SERVPORT_STR *) 0, 0);
 	    end_point = concatenate(hostaddr.buf,
 				    ":", MASTER_INET_PORT(serv), (char *) 0);
-            msg_info("HU--%s: Port: %s", myname, end_point);
+            if (msg_verbose)
+                msg_info("HU--%s: Port: %s", myname, end_point);
 	    serv->listen_fd[n]
 		= inet_listen(end_point, serv->max_proc > var_proc_limit ?
 			      serv->max_proc : var_proc_limit, NON_BLOCKING);
             close_on_exec(serv->listen_fd[n], CLOSE_ON_EXEC);
 	    myfree(end_point);
-            msg_info("HU--Yelkenler Fora....");
+            if (msg_verbose)
+                msg_info("HU--Startinggg INET....");
 	}
 	break;
 

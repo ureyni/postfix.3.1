@@ -718,7 +718,8 @@ static ARGV *expand_argv(const char *service, char **argv,
 		/*
 		 * This argument contains $recipient.
 		 */
-                msg_info("HU--Orginal Recipient List %s:%d",rcpt_list->info[i].address,i);
+                if (msg_verbose)
+                    msg_info("HU--Orginal Recipient List %s:%d",rcpt_list->info[i].address,i);
 		if (state.expand_flag & PIPE_FLAG_RCPT) {
 		    morph_recipient(buf, rcpt_list->info[i].address, flags);
 		    dict_update(PIPE_DICT_TABLE, PIPE_DICT_RCPT, STR(buf));
@@ -1101,13 +1102,13 @@ static int deliver_message(DELIVER_REQUEST *request, char *service, char **argv)
     int     command_status;
     ARGV   *export_env;
     const char *sender;
-    
+    /*
     int i;
     for (i = 0; i < rcpt_list->len; i++) {
             msg_info("%s: HU--Rcplist <%s> ", myname, rcpt_list->info[i].address);
 
     }
-
+    */
 
 #define DELIVER_MSG_CLEANUP() { \
 	dsb_free(why); \
@@ -1372,7 +1373,8 @@ int     main(int argc, char **argv)
      * Fingerprint executables and core dumps.
      */
     MAIL_VERSION_STAMP_ALLOCATE;
-    msg_info("HU--Pipe main");
+    if (msg_verbose)
+        msg_info("HU--Pipe main");
     single_server_main(argc, argv, pipe_service,
 		       CA_MAIL_SERVER_TIME_TABLE(time_table),
 		       CA_MAIL_SERVER_STR_TABLE(str_table),

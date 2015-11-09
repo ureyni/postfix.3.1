@@ -542,7 +542,8 @@ int     pipe_command(VSTREAM *src, DSN_BUF *why,...)
 	 * capture the output in the parent process.
 	 */
 	closelog();
-        msg_info("HU--var_procname:%s--%s",var_procname,args.command);
+        if (msg_verbose)
+            msg_info("HU--var_procname:%s--%s",var_procname,args.command);
 	msg_vstream_init(var_procname, VSTREAM_ERR);
 	if (args.argv) {
 	    execvp(args.argv[0], args.argv);
@@ -561,7 +562,8 @@ int     pipe_command(VSTREAM *src, DSN_BUF *why,...)
 	/*
 	 * Parent.
 	 */
-        msg_info("HU--myname:%s--args.command:%s",myname,args.command);
+        if (msg_verbose)
+            msg_info("HU--myname:%s--args.command:%s",myname,args.command);
     default:
 	close(cmd_in_pipe[0]);
 	close(cmd_out_pipe[1]);

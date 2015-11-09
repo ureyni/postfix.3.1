@@ -1276,7 +1276,8 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
     QMGR_QUEUE *bqueue;
     QMGR_JOB *job = 0;
     QMGR_PEER *peer = 0;
-    msg_info("HU--%s rcplist.count %d -- var_multipli_domain_enb :%d", "qmgr_message_assign", list.len,var_multipli_domain_enb);
+    if (msg_verbose)
+        msg_info("HU--%s rcplist.count %d -- var_multipli_domain_enb :%d", "qmgr_message_assign", list.len,var_multipli_domain_enb);
     /*
      * Try to bundle as many recipients in a delivery request as we can. When
      * the recipient resolves to the same site and transport as an existing
@@ -1310,7 +1311,8 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
             peer = 0;
             
         }
-        msg_info("HU-- jop : job->rcpt_count : %d,job->rcpt_limit :%d ,job->message->rcpt_list.len :%d ", job->rcpt_count,job->rcpt_limit,job->message->rcpt_list.len);
+        if (msg_verbose)
+            msg_info("HU-- jop : job->rcpt_count : %d,job->rcpt_limit :%d ,job->message->rcpt_list.len :%d ", job->rcpt_count,job->rcpt_limit,job->message->rcpt_list.len);
 
         /*
          * Lookup or instantiate job peer if necessary.
@@ -1363,7 +1365,8 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
 
  //   if (bqueue)
    //     myfree(bqueue);
-    msg_info("HU--%s rcplist.count END --- %d", "qmgr_message_assign", entry->rcpt_list.len);
+    if (msg_verbose)
+        msg_info("HU--%s rcplist.count END --- %d", "qmgr_message_assign", entry->rcpt_list.len);
 }
 
 /* qmgr_message_move_limits - recycle unused recipient slots */
@@ -1492,8 +1495,8 @@ QMGR_MESSAGE *qmgr_message_alloc(const char *queue_name, const char *queue_id,
         qmgr_message_close(message);
         if (message->rcpt_offset == 0)
             qmgr_message_move_limits(message);
-        
-        msg_info("HU-- %s: END--------", myname);
+        if (msg_verbose)
+            msg_info("HU-- %s: END--------", myname);
         return (message);
     }
 }

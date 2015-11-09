@@ -955,10 +955,8 @@ static int deliver_message(const char *service, DELIVER_REQUEST *request)
 {
     SMTP_STATE *state;
     int     result;
-
-    msg_info("HU--: RcptList.count %d", request->rcpt_list.len);
     if (msg_verbose)
-	msg_info("deliver_message: from 3-%s", request->sender);
+  	msg_info("deliver_message: from 3-%s RcptList.count %d", request->sender, request->rcpt_list.len);
 
     /*
      * Sanity checks. The smtp server is unprivileged and chrooted, so we can
