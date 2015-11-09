@@ -695,7 +695,6 @@
           <in>xsasl_server.c</in>
         </df>
       </df>
-      <in>postfixNotlari.txt</in>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -1039,8 +1038,6 @@
           </incDir>
         </cTool>
       </folder>
-      <item path="postfixNotlari.txt" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="src/anvil/anvil.c" ex="false" tool="0" flavor2="2">
         <cTool flags="1">
         </cTool>
