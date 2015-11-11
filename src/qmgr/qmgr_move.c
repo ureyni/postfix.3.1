@@ -58,6 +58,7 @@ void    qmgr_move(const char *src_queue, const char *dst_queue,
 		          time_t time_stamp)
 {
     const char *myname = "qmgr_move";
+    msg_info("HU-- start move queue %s -> %s", src_queue, dst_queue);
     SCAN_DIR *queue_dir;
     char   *queue_id;
     struct utimbuf tbuf;

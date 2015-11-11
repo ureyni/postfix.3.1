@@ -466,6 +466,7 @@ int     var_qmgr_daemon_timeout;
 int     var_qmgr_ipc_timeout;
 int     var_dsn_delay_cleared;
 bool    var_multipli_domain_enb=0;
+int     counter=0;
 
 static QMGR_SCAN *qmgr_scans[2];
 
@@ -551,6 +552,9 @@ static void qmgr_trigger_event(char *buf, ssize_t len,
 
 static int qmgr_loop(char *unused_name, char **unused_argv)
 {
+    const char *myname="qmgr_loop";
+    msg_info("HU--%s Start Counter : %d",myname,counter++);
+    
     char   *path;
     ssize_t token_count;
     int     feed = 0;

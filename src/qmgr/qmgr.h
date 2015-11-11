@@ -251,6 +251,7 @@ struct QMGR_QUEUE {
     DSN    *dsn;			/* why unavailable */
     time_t  clog_time_to_warn;		/* time of last warning */
     int     blocker_tag;		/* tagged if blocks job list */
+    char   *qname;                      /* queue name */
 };
 
 #define	QMGR_QUEUE_TODO	1		/* waiting for service */

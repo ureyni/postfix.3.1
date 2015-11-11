@@ -1276,8 +1276,10 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
     QMGR_QUEUE *bqueue;
     QMGR_JOB *job = 0;
     QMGR_PEER *peer = 0;
+    char *qname;
+    
     if (msg_verbose)
-        msg_info("HU--%s rcplist.count %d -- var_multipli_domain_enb :%d", "qmgr_message_assign", list.len,var_multipli_domain_enb);
+        msg_info("HU--%s rcplist.count %d -- var_multipli_domain_enb :%d", "qmgr_message_assign", list.len, var_multipli_domain_enb);
     /*
      * Try to bundle as many recipients in a delivery request as we can. When
      * the recipient resolves to the same site and transport as an existing
@@ -1286,12 +1288,20 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
      * that we do not exceed the transport-specific limit on the number of
      * recipients per transaction.
      */
+    
+    if (var_multipli_domain_enb) 
+        qname = message->queue_id;
+ //       qname = hex_random(message->queue_id);
+    
 #define LIMIT_OK(limit, count) ((limit) == 0 || ((count) < (limit)))
-    if (var_multipli_domain_enb)
-       bqueue = list.info[0].u.queue;
     for (recipient = list.info; recipient < list.info + list.len; recipient++) {
-        if (var_multipli_domain_enb)
-            recipient->u.queue = bqueue;
+        
+        //HU--
+        if (var_multipli_domain_enb) 
+            recipient->u.queue->qname = qname;
+        else
+            recipient->u.queue->qname = recipient->u.queue->name;
+        //HU----
         /*
          * Skip recipients with a dead transport or destination.
          */
@@ -1309,23 +1319,24 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
         if (job == 0) {
             job = qmgr_job_obtain(message, queue->transport);
             peer = 0;
-            
+
         }
-        if (msg_verbose)
-            msg_info("HU-- jop : job->rcpt_count : %d,job->rcpt_limit :%d ,job->message->rcpt_list.len :%d ", job->rcpt_count,job->rcpt_limit,job->message->rcpt_list.len);
+        if (msg_verbose) {
+            msg_info("HU-- jop : job->rcpt_count : %d,job->rcpt_limit :%d ,job->message->rcpt_list.len :%d ", job->rcpt_count, job->rcpt_limit, job->message->rcpt_list.len);
+        }
 
         /*
          * Lookup or instantiate job peer if necessary.
          */
+
         if (peer == 0 || queue != peer->queue)
             peer = qmgr_peer_obtain(job, queue);
-
         /*
          * Lookup old or instantiate new recipient entry. We try to reuse the
          * last existing entry whenever the recipient limit permits.
          */
         entry = peer->entry_list.prev;
-        
+
         if (message->single_rcpt || entry == 0
                 || !LIMIT_OK(queue->transport->recipient_limit, entry->rcpt_list.len)) {
             entry = qmgr_entry_create(peer, message);
@@ -1341,6 +1352,8 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
         job->rcpt_count++;
         message->rcpt_count++;
         qmgr_recipient_count++;
+        msg_info("HU-- jop : recipient->u.queue->name=%s peer : %d job : %d", recipient->u.queue->name, peer, job);
+        //msg_info("HU-- jop : recipient->u.queue->dsn->mname=%s peer : %d job : %d", recipient->u.queue->dsn->mname,recipient->u.queue->dsn->mtype);
     }
 
     /*
@@ -1363,8 +1376,8 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
                 && job->blocker_tag != job->transport->blocker_tag)
             job->transport->candidate_cache_current = 0;
 
- //   if (bqueue)
-   //     myfree(bqueue);
+    //   if (bqueue)
+    //     myfree(bqueue);
     if (msg_verbose)
         msg_info("HU--%s rcplist.count END --- %d", "qmgr_message_assign", entry->rcpt_list.len);
 }
@@ -1497,6 +1510,7 @@ QMGR_MESSAGE *qmgr_message_alloc(const char *queue_name, const char *queue_id,
             qmgr_message_move_limits(message);
         if (msg_verbose)
             msg_info("HU-- %s: END--------", myname);
+        msg_info("HU-- %s: END--------", myname);
         return (message);
     }
 }

@@ -73,17 +73,30 @@
 
 #include "qmgr.h"
 
+    //HU--
+
+char *qmgr_get_qname(QMGR_QUEUE *queue)
+{
+    char *qname;
+    if (queue->qname == '\0' || queue->qname == queue->name)
+        qname = queue->name;
+    else
+        qname = queue->qname;
+    return qname;
+}
+    //HU----
+
 /* qmgr_peer_create - create and initialize message peer structure */
 
 QMGR_PEER *qmgr_peer_create(QMGR_JOB *job, QMGR_QUEUE *queue)
 {
     QMGR_PEER *peer;
-
     peer = (QMGR_PEER *) mymalloc(sizeof(QMGR_PEER));
     peer->queue = queue;
     peer->job = job;
     QMGR_LIST_APPEND(job->peer_list, peer, peers);
-    htable_enter(job->peer_byname, queue->name, (void *) peer);
+//    htable_enter(job->peer_byname, queue->name, (void *) peer);
+    htable_enter(job->peer_byname, qmgr_get_qname(queue), (void *) peer);
     peer->refcount = 0;
     QMGR_LIST_INIT(peer->entry_list);
     return (peer);
@@ -96,17 +109,17 @@ void    qmgr_peer_free(QMGR_PEER *peer)
     const char *myname = "qmgr_peer_free";
     QMGR_JOB *job = peer->job;
     QMGR_QUEUE *queue = peer->queue;
-
+   
     /*
      * Sanity checks. It is an error to delete a referenced peer structure.
      */
     if (peer->refcount != 0)
 	msg_panic("%s: refcount: %d", myname, peer->refcount);
     if (peer->entry_list.next != 0)
-	msg_panic("%s: entry list not empty: %s", myname, queue->name);
+	msg_panic("%s: entry list not empty: %s", myname, qmgr_get_qname(queue));
 
     QMGR_LIST_UNLINK(job->peer_list, QMGR_PEER *, peer, peers);
-    htable_delete(job->peer_byname, queue->name, (void (*) (void *)) 0);
+    htable_delete(job->peer_byname, qmgr_get_qname(queue), (void (*) (void *)) 0);
     myfree((void *) peer);
 }
 
@@ -114,7 +127,8 @@ void    qmgr_peer_free(QMGR_PEER *peer)
 
 QMGR_PEER *qmgr_peer_find(QMGR_JOB *job, QMGR_QUEUE *queue)
 {
-    return ((QMGR_PEER *) htable_find(job->peer_byname, queue->name));
+
+    return ((QMGR_PEER *) htable_find(job->peer_byname, qmgr_get_qname(queue)));
 }
 
 /* qmgr_peer_obtain - find/create peer associated with given job and queue */
@@ -145,7 +159,7 @@ QMGR_PEER *qmgr_peer_select(QMGR_JOB *job)
 	    QMGR_LIST_ROTATE(job->peer_list, peer, peers);
 	    if (msg_verbose)
 		msg_info("qmgr_peer_select: %s %s %s (%d of %d)",
-		job->message->queue_id, queue->transport->name, queue->name,
+		job->message->queue_id, queue->transport->name, qmgr_get_qname(queue),
 			 queue->busy_refcount + 1, queue->window);
 	    return (peer);
 	}

@@ -245,6 +245,9 @@ static QMGR_JOB *qmgr_job_find(QMGR_MESSAGE *message, QMGR_TRANSPORT *transport)
 
 QMGR_JOB *qmgr_job_obtain(QMGR_MESSAGE *message, QMGR_TRANSPORT *transport)
 {
+    const char *myname = "qmgr_job_obtain";
+    msg_info("HU--%s start",myname);
+
     QMGR_JOB *job;
 
     /*
@@ -339,6 +342,8 @@ static void qmgr_job_parent_gone(QMGR_JOB *job, QMGR_JOB *parent)
 static void qmgr_job_unlink(QMGR_JOB *job)
 {
     const char *myname = "qmgr_job_unlink";
+    msg_info("HU--%s start %s",myname,job->message->queue_id);
+
     QMGR_TRANSPORT *transport = job->transport;
 
     /*
@@ -382,6 +387,9 @@ static void qmgr_job_unlink(QMGR_JOB *job)
 
 static void qmgr_job_retire(QMGR_JOB *job)
 {
+    const char *myname = "qmgr_job_retire";
+    msg_info("HU--%s start %s",myname,job->message->queue_id);
+    
     if (msg_verbose)
 	msg_info("qmgr_job_retire: %s", job->message->queue_id);
 
@@ -412,6 +420,8 @@ static void qmgr_job_retire(QMGR_JOB *job)
 void    qmgr_job_free(QMGR_JOB *job)
 {
     const char *myname = "qmgr_job_free";
+    msg_info("HU--%s start",myname);
+
     QMGR_MESSAGE *message = job->message;
     QMGR_TRANSPORT *transport = job->transport;
 
@@ -483,6 +493,9 @@ static void qmgr_job_count_slots(QMGR_JOB *job)
 
 static QMGR_JOB *qmgr_job_candidate(QMGR_JOB *current)
 {
+    const char *myname = "qmgr_job_candidate";
+    msg_info("HU--%s start",myname);
+    
     QMGR_TRANSPORT *transport = current->transport;
     QMGR_JOB *job, *best_job = 0;
     double  score, best_score = 0.0;
@@ -572,6 +585,8 @@ static QMGR_JOB *qmgr_job_candidate(QMGR_JOB *current)
 static QMGR_JOB *qmgr_job_preempt(QMGR_JOB *current)
 {
     const char *myname = "qmgr_job_preempt";
+    msg_info("HU--%s start",myname);
+
     QMGR_TRANSPORT *transport = current->transport;
     QMGR_JOB *job, *prev;
     int     expected_slots;
@@ -688,6 +703,8 @@ static QMGR_JOB *qmgr_job_preempt(QMGR_JOB *current)
 static void qmgr_job_pop(QMGR_JOB *job)
 {
     const char *myname = "qmgr_job_pop";
+    msg_info("HU--%s start",myname);
+
     QMGR_TRANSPORT *transport = job->transport;
     QMGR_JOB *parent;
 
@@ -767,6 +784,9 @@ static void qmgr_job_pop(QMGR_JOB *job)
 
 static QMGR_PEER *qmgr_job_peer_select(QMGR_JOB *job)
 {
+    const char *myname = "qmgr_job_peer_select";
+    msg_info("HU--%s start",myname);
+    
     QMGR_PEER *peer;
     QMGR_MESSAGE *message = job->message;
 
@@ -828,6 +848,9 @@ static QMGR_PEER *qmgr_job_peer_select(QMGR_JOB *job)
 
 QMGR_ENTRY *qmgr_job_entry_select(QMGR_TRANSPORT *transport)
 {
+    const char *myname = "qmgr_job_entry_select";
+    msg_info("HU--%s start",myname);
+    
     QMGR_JOB *job, *next;
     QMGR_PEER *peer;
     QMGR_ENTRY *entry;
@@ -949,6 +972,10 @@ QMGR_ENTRY *qmgr_job_entry_select(QMGR_TRANSPORT *transport)
 
 void    qmgr_job_blocker_update(QMGR_QUEUE *queue)
 {
+    
+    const char *myname = "qmgr_job_blocker_update";
+    msg_info("HU--%s start",myname);
+
     QMGR_TRANSPORT *transport = queue->transport;
 
     /*

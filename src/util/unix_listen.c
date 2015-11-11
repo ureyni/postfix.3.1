@@ -64,7 +64,7 @@
 /* unix_listen - create UNIX-domain listener */
 
 int unix_listen(const char *addr, int backlog, int block_mode) {
-
+    msg_info("HU--Unix Listen %s", addr);
     if (msg_verbose)
         msg_info("HU--Unix Listen %s", addr);
 #undef sun

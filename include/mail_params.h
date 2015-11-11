@@ -2415,6 +2415,7 @@ extern char *var_filter_xport;
 #define VAR_MULTIPLI_DOMAIN_ENB		"multipli_domain_enable"
 #define DEF_MULTIPLI_DOMAIN_ENB		0
 extern bool var_multipli_domain_enb;
+
 //--HU--
 
 #define VAR_DEF_FILTER_NEXTHOP		"default_filter_nexthop"

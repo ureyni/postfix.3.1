@@ -50,12 +50,35 @@
 #include <mymalloc.h>
 #include <vstring.h>
 #include <hex_code.h>
+#include <stdlib.h>
 
 /* Application-specific. */
 
 static const unsigned char hex_chars[] = "0123456789ABCDEF";
 
 #define UCHAR_PTR(x) ((const unsigned char *)(x))
+
+//HU--
+/* hex_random - random hex value generate */
+
+char *hex_random(char *quid){
+    int length = 10;
+    char *random=(char *)malloc(length+1);
+    int rand_range;
+    int i;
+    for (i = 0; i < strlen(quid); i++) {
+        rand_range *= (unsigned) quid[i];
+    }
+   
+    srand(rand_range);
+    
+    while(length--) {
+
+        random[length] = hex_chars[rand() % 16];
+    }
+    return random;
+}
+
 
 /* hex_encode - raw data to encoded */
 

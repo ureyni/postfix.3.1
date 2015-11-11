@@ -107,6 +107,9 @@ void    qmgr_defer_transport(QMGR_TRANSPORT *transport, DSN *dsn)
 
 void    qmgr_defer_todo(QMGR_QUEUE *queue, DSN *dsn)
 {
+    const char *myname="qmgr_defer_todo";
+    msg_info("HU--%s Start",myname);
+    
     QMGR_ENTRY *entry;
     QMGR_ENTRY *next;
     QMGR_MESSAGE *message;

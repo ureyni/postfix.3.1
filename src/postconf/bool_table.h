@@ -48,6 +48,7 @@
  VAR_LMTP_CNAME_OVERR, DEF_LMTP_CNAME_OVERR, &var_smtp_cname_overr,
  VAR_TLS_BC_PKEY_FPRINT, DEF_TLS_BC_PKEY_FPRINT, &var_tls_bc_pkey_fprint,
  VAR_SMTP_REC_DEADLINE, DEF_SMTP_REC_DEADLINE, &var_smtp_rec_deadline,
+ VAR_MULTIPLI_DOMAIN_ENB, DEF_MULTIPLI_DOMAIN_ENB, &var_multipli_domain_enb,
  VAR_SMTPD_TLS_AUTH_ONLY, DEF_SMTPD_TLS_AUTH_ONLY, &var_smtpd_tls_auth_only,
  VAR_QMQPD_CLIENT_PORT_LOG, DEF_QMQPD_CLIENT_PORT_LOG, &var_qmqpd_client_port_log,
  VAR_DNS_NCACHE_TTL_FIX, DEF_DNS_NCACHE_TTL_FIX, &var_dns_ncache_ttl_fix,
@@ -111,4 +112,3 @@
  VAR_STRICT_8BIT_BODY, DEF_STRICT_8BIT_BODY, &var_strict_8bit_body,
  VAR_SMTP_SASL_ENABLE, DEF_SMTP_SASL_ENABLE, &var_smtp_sasl_enable,
  VAR_SMTPD_TLS_RECHEAD, DEF_SMTPD_TLS_RECHEAD, &var_smtpd_tls_received_header,
- VAR_MULTIPLI_DOMAIN_ENB, DEF_MULTIPLI_DOMAIN_ENB, &var_multipli_domain_enb,

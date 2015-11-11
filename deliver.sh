@@ -1,4 +1,16 @@
-echo $@>>/opt/myprojects/postfix-3.1-20151011/deliver.log
+echo $@>>/var/log/deliver.log
+#exit 0
 cat >/var/log/abc
-/usr/sbin/sendmail.postfix $@</var/log/abc
-echo $?>>/opt/myprojects/postfix-3.1-20151011/deliver.log
+COUNTER=1
+for argument in $@
+do
+  if [ $COUNTER -gt 2 ]
+  then
+    /usr/sbin/sendmail.postfix -i -G -f $2 $argument
+    echo "/usr/sbin/sendmail.postfix -i -G -f $2 $argument">>/var/log/deliver.log
+  fi 
+  COUNTER=$[$COUNTER +1]
+  echo $argument"..$COUNTER \n"$2>>/var/log/deliver.log
+done
+#/usr/sbin/sendmail.postfix -i -G $@</var/log/abc
+#echo $?>>/var/log/deliver.log

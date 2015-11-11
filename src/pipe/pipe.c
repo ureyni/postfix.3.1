@@ -1092,6 +1092,8 @@ static int eval_command_status(int command_status, char *service,
 static int deliver_message(DELIVER_REQUEST *request, char *service, char **argv)
 {
     const char *myname = "deliver_message";
+    msg_info("HU--%s Start",myname);
+    
     static PIPE_PARAMS conf;
     static PIPE_ATTR attr;
     RECIPIENT_LIST *rcpt_list = &request->rcpt_list;

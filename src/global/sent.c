@@ -96,6 +96,9 @@ int     sent(int flags, const char *id, MSG_STATS *stats,
 	             RECIPIENT *recipient, const char *relay,
 	             DSN *dsn)
 {
+    const char *myname="sent.c Sent";
+    msg_info("HU--%s Starting",myname);
+    
     DSN     my_dsn = *dsn;
     DSN    *dsn_res;
     int     status;

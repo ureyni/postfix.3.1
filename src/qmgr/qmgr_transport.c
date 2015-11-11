@@ -302,6 +302,9 @@ static void qmgr_transport_event(int unused_event, void *context)
 
 QMGR_TRANSPORT *qmgr_transport_select(void)
 {
+    const char *myname = "qmgr_transport_select";
+    msg_info("HU--%s start",myname);
+    
     QMGR_TRANSPORT *xport;
     QMGR_QUEUE *queue;
     int     need;
@@ -332,6 +335,7 @@ QMGR_TRANSPORT *qmgr_transport_select(void)
 		QMGR_LIST_ROTATE(qmgr_transport_list, xport, peers);
 		if (msg_verbose)
 		    msg_info("qmgr_transport_select: %s", xport->name);
+                msg_info("HU--%s Select Transport : %s",myname,xport->name);
 		return (xport);
 	    }
 	}
@@ -344,7 +348,8 @@ QMGR_TRANSPORT *qmgr_transport_select(void)
 void    qmgr_transport_alloc(QMGR_TRANSPORT *transport, QMGR_TRANSPORT_ALLOC_NOTIFY notify)
 {
     QMGR_TRANSPORT_ALLOC *alloc;
-
+    const char *myname = "qmgr_transport_alloc";
+    msg_info("HU--%s start Transport Name : %s",myname,transport->name);
     /*
      * Sanity checks.
      */
@@ -414,6 +419,9 @@ void    qmgr_transport_alloc(QMGR_TRANSPORT *transport, QMGR_TRANSPORT_ALLOC_NOT
 
 QMGR_TRANSPORT *qmgr_transport_create(const char *name)
 {
+    const char *myname = "qmgr_transport_create";
+    msg_info("HU--%s start Transport Name %s",myname,name);
+    
     QMGR_TRANSPORT *transport;
 
     if (htable_find(qmgr_transport_byname, name) != 0)
