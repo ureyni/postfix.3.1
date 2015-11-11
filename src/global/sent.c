@@ -97,7 +97,8 @@ int     sent(int flags, const char *id, MSG_STATS *stats,
 	             DSN *dsn)
 {
     const char *myname="sent.c Sent";
-    msg_info("HU--%s Starting",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s Starting",myname);
     
     DSN     my_dsn = *dsn;
     DSN    *dsn_res;

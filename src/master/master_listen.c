@@ -122,14 +122,16 @@ void    master_listen_init(MASTER_SERV *serv)
 	    end_point = concatenate(hostaddr.buf,
 				    ":", MASTER_INET_PORT(serv), (char *) 0);
             if (msg_verbose)
-                msg_info("HU--%s: Port: %s", myname, end_point);
+                if (msg_verbose)
+ 	msg_info("HU--%s: Port: %s", myname, end_point);
 	    serv->listen_fd[n]
 		= inet_listen(end_point, serv->max_proc > var_proc_limit ?
 			      serv->max_proc : var_proc_limit, NON_BLOCKING);
             close_on_exec(serv->listen_fd[n], CLOSE_ON_EXEC);
 	    myfree(end_point);
             if (msg_verbose)
-                msg_info("HU--Startinggg INET....");
+                if (msg_verbose)
+ 	msg_info("HU--Startinggg INET....");
 	}
 	break;
 

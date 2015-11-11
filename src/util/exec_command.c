@@ -51,7 +51,8 @@
 NORETURN exec_command(const char *command)
 {
     if (msg_verbose)
-        msg_info("HU-- exec_command in command : %s",command);
+        if (msg_verbose)
+ 	msg_info("HU-- exec_command in command : %s",command);
     ARGV   *argv;
 
     /*

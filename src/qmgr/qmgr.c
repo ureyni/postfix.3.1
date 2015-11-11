@@ -553,7 +553,8 @@ static void qmgr_trigger_event(char *buf, ssize_t len,
 static int qmgr_loop(char *unused_name, char **unused_argv)
 {
     const char *myname="qmgr_loop";
-    msg_info("HU--%s Start Counter : %d",myname,counter++);
+    if (msg_verbose)
+ 	msg_info("HU--%s Start Counter : %d",myname,counter++);
     
     char   *path;
     ssize_t token_count;

@@ -203,7 +203,8 @@ void    qmgr_entry_unselect(QMGR_ENTRY *entry)
 void    qmgr_entry_move_todo(QMGR_QUEUE *dst_queue, QMGR_ENTRY *entry)
 {
     const char *myname = "qmgr_entry_move_todo";
-    msg_info("HU--%s Start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s Start",myname);
             
     QMGR_TRANSPORT *dst_transport = dst_queue->transport;
     QMGR_MESSAGE *message = entry->message;
@@ -251,7 +252,8 @@ void    qmgr_entry_move_todo(QMGR_QUEUE *dst_queue, QMGR_ENTRY *entry)
 void    qmgr_entry_done(QMGR_ENTRY *entry, int which)
 {
     const char *myname = "qmgr_entry_done";
-    msg_info("HU--%s Start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s Start",myname);
     
     QMGR_QUEUE *queue = entry->queue;
     QMGR_MESSAGE *message = entry->message;
@@ -364,7 +366,8 @@ void    qmgr_entry_done(QMGR_ENTRY *entry, int which)
 QMGR_ENTRY *qmgr_entry_create(QMGR_PEER *peer, QMGR_MESSAGE *message)
 {
     const char *myname="qmgr_entry_create";
-    msg_info("HU--%s Start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s Start",myname);
     QMGR_ENTRY *entry;
     QMGR_QUEUE *queue = peer->queue;
 

@@ -171,7 +171,8 @@ static void qmgr_active_defer(const char *queue_name, const char *queue_id,
 int     qmgr_active_feed(QMGR_SCAN *scan_info, const char *queue_id)
 {
     const char *myname = "qmgr_active_feed";
-    msg_info("HU--%s start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s start",myname);
     QMGR_MESSAGE *message;
     struct stat st;
     const char *path;
@@ -343,7 +344,8 @@ static void qmgr_active_done_2_bounce_flush(int status, void *context)
 static void qmgr_active_done_2_generic(QMGR_MESSAGE *message)
 {
     const char *myname = "qmgr_active_done_2_generic";
-    msg_info("HU--%s start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s start",myname);
     const char *path;
     struct stat st;
 

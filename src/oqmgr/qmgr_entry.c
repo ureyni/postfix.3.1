@@ -212,7 +212,8 @@ void    qmgr_entry_move_todo(QMGR_QUEUE *dst, QMGR_ENTRY *entry)
 void    qmgr_entry_done(QMGR_ENTRY *entry, int which)
 {
     const char *myname = "qmgr_entry_done";
-    msg_info("HU--%s start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s start",myname);
 
     QMGR_QUEUE *queue = entry->queue;
     QMGR_MESSAGE *message = entry->message;

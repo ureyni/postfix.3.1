@@ -1983,10 +1983,12 @@ static int mail_open_stream(SMTPD_STATE *state) {
                     REC_TYPE_TIME_ARG(state->arrival_time));
             if (*var_filter_xport) {
                 if (msg_verbose)
-                    msg_info("HU--1)Cleanup %s dfilt var_filter_xport : %s quid:%s", state->cleanup->buf.data, var_filter_xport, state->queue_id);
+                    if (msg_verbose)
+ 	msg_info("HU--1)Cleanup %s dfilt var_filter_xport : %s quid:%s", state->cleanup->buf.data, var_filter_xport, state->queue_id);
                 rec_fprintf(state->cleanup, REC_TYPE_FILT, "%s", var_filter_xport);
                 if (msg_verbose)
-                    msg_info("HU--2)Cleanup %s dfilt var_filter_xport : %s", state->cleanup->buf.data, var_filter_xport);
+                    if (msg_verbose)
+ 	msg_info("HU--2)Cleanup %s dfilt var_filter_xport : %s", state->cleanup->buf.data, var_filter_xport);
             }
             if (FORWARD_IDENT(state))
                 rec_fprintf(state->cleanup, REC_TYPE_ATTR, "%s=%s",
@@ -2884,7 +2886,8 @@ static int rcpt_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
     if (state->recipient == 0)
         state->recipient = mystrdup(STR(state->addr_buf));
     if (msg_verbose)
-        msg_info("HU--recipient Command : %s -> %d", state->recipient, state->rcpt_count);
+        if (msg_verbose)
+ 	msg_info("HU--recipient Command : %s -> %d", state->recipient, state->rcpt_count);
 
     if (state->cleanup) {
         /* Note: RFC(2)821 externalized address! */
@@ -2909,7 +2912,8 @@ static int rcpt_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
     }
     //HU--
     if (msg_verbose)
-        msg_info("HU--Add Recipient: %s", state->recipient);
+        if (msg_verbose)
+ 	msg_info("HU--Add Recipient: %s", state->recipient);
 
     if (state->rcpt_count == 1)
         recipient_list_init(&state->rcpt_list, 1);
@@ -2921,10 +2925,12 @@ static int rcpt_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *argv) {
 
     /*--HU-- --*/
     if (msg_verbose) {
-        msg_info("HU--Added Recipient: %s->%d", mystrdup(STR(state->addr_buf)), state->rcpt_list.len);
+        if (msg_verbose)
+ 	msg_info("HU--Added Recipient: %s->%d", mystrdup(STR(state->addr_buf)), state->rcpt_list.len);
         int i = 0;
         for (i = 0; i < state->rcpt_list.len; i++)
-            msg_info("HU--Recipient List : %s->%d", state->rcpt_list.info[i].address, i);
+        if (msg_verbose)
+ 	msg_info("HU--Recipient List : %s->%d", state->rcpt_list.info[i].address, i);
     }
     smtpd_chat_reply(state, "250 2.1.5 Ok");
     return (0);
@@ -3079,7 +3085,8 @@ static int data_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *unused_argv) {
      * error.
      */
     if (msg_verbose)
-        msg_info("HU--Start data_cmd function");
+        if (msg_verbose)
+ 	msg_info("HU--Start data_cmd function");
     if (state->rcpt_count == 0) {
         if (!SMTPD_IN_MAIL_TRANSACTION(state)) {
             state->error_mask |= MAIL_ERROR_PROTOCOL;
@@ -3250,7 +3257,8 @@ static int data_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *unused_argv) {
     }
     smtpd_chat_reply(state, "354 End data with <CR><LF>.<CR><LF>");
     state->where = SMTPD_AFTER_DATA;
-    //msg_info("HU--Before Data - rcpt count %d: Recipients %s", state->rcpt_count, state->recipient);
+    //if (msg_verbose)
+ 	msg_info("HU--Before Data - rcpt count %d: Recipients %s", state->rcpt_count, state->recipient);
 
     /*
      * Copy the message content. If the cleanup process has a problem, keep
@@ -3272,7 +3280,8 @@ static int data_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *unused_argv) {
             curr_rec_type = REC_TYPE_CONT;
         start = vstring_str(state->buffer);
         if (msg_verbose)
-            msg_info("HU--Data- : %s", start);
+            if (msg_verbose)
+ 	msg_info("HU--Data- : %s", start);
         len = VSTRING_LEN(state->buffer);
         if (first) {
             if (strncmp(start + strspn(start, ">"), "From ", 5) == 0) {
@@ -3299,7 +3308,8 @@ static int data_cmd(SMTPD_STATE *state, int argc, SMTPD_TOKEN *unused_argv) {
             }
         }
     }
-    // msg_info("HU--Data : %s -- %s -- %s",state->queue_id,out_stream->path,out_stream->buf.data);
+    // if (msg_verbose)
+ 	msg_info("HU--Data : %s -- %s -- %s",state->queue_id,out_stream->path,out_stream->buf.data);
     state->where = SMTPD_AFTER_DOT;
     if (state->err == CLEANUP_STAT_OK
             && SMTPD_STAND_ALONE(state) == 0

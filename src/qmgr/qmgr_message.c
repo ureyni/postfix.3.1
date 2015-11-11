@@ -1279,7 +1279,7 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
     char *qname;
     
     if (msg_verbose)
-        msg_info("HU--%s rcplist.count %d -- var_multipli_domain_enb :%d", "qmgr_message_assign", list.len, var_multipli_domain_enb);
+ 	msg_info("HU--%s rcplist.count %d -- var_multipli_domain_enb :%d", "qmgr_message_assign", list.len, var_multipli_domain_enb);
     /*
      * Try to bundle as many recipients in a delivery request as we can. When
      * the recipient resolves to the same site and transport as an existing
@@ -1321,9 +1321,8 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
             peer = 0;
 
         }
-        if (msg_verbose) {
-            msg_info("HU-- jop : job->rcpt_count : %d,job->rcpt_limit :%d ,job->message->rcpt_list.len :%d ", job->rcpt_count, job->rcpt_limit, job->message->rcpt_list.len);
-        }
+        if (msg_verbose)
+ 	msg_info("HU-- jop : job->rcpt_count : %d,job->rcpt_limit :%d ,job->message->rcpt_list.len :%d ", job->rcpt_count, job->rcpt_limit, job->message->rcpt_list.len);
 
         /*
          * Lookup or instantiate job peer if necessary.
@@ -1352,8 +1351,8 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
         job->rcpt_count++;
         message->rcpt_count++;
         qmgr_recipient_count++;
-        msg_info("HU-- jop : recipient->u.queue->name=%s peer : %d job : %d", recipient->u.queue->name, peer, job);
-        //msg_info("HU-- jop : recipient->u.queue->dsn->mname=%s peer : %d job : %d", recipient->u.queue->dsn->mname,recipient->u.queue->dsn->mtype);
+ 	if (msg_verbose)
+ 	msg_info("HU-- jop : recipient->u.queue->name=%s peer : %d job : %d", recipient->u.queue->name, peer, job);
     }
 
     /*
@@ -1379,7 +1378,7 @@ static void qmgr_message_assign(QMGR_MESSAGE *message) {
     //   if (bqueue)
     //     myfree(bqueue);
     if (msg_verbose)
-        msg_info("HU--%s rcplist.count END --- %d", "qmgr_message_assign", entry->rcpt_list.len);
+ 	msg_info("HU--%s rcplist.count END --- %d", "qmgr_message_assign", entry->rcpt_list.len);
 }
 
 /* qmgr_message_move_limits - recycle unused recipient slots */
@@ -1508,9 +1507,8 @@ QMGR_MESSAGE *qmgr_message_alloc(const char *queue_name, const char *queue_id,
         qmgr_message_close(message);
         if (message->rcpt_offset == 0)
             qmgr_message_move_limits(message);
-        if (msg_verbose)
-            msg_info("HU-- %s: END--------", myname);
-        msg_info("HU-- %s: END--------", myname);
+ 	if (msg_verbose)
+ 	msg_info("HU-- %s: END--------", myname);
         return (message);
     }
 }

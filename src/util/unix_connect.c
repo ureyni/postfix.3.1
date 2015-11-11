@@ -59,7 +59,8 @@
 int     unix_connect(const char *addr, int block_mode, int timeout)
 {
     if (msg_verbose)
-        msg_info("HU--Unix Connect : %s",addr);
+        if (msg_verbose)
+ 	msg_info("HU--Unix Connect : %s",addr);
 #undef sun
     struct sockaddr_un sun;
     ssize_t len = strlen(addr);

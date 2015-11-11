@@ -171,7 +171,8 @@ static void qmgr_active_defer(const char *queue_name, const char *queue_id,
 int     qmgr_active_feed(QMGR_SCAN *scan_info, const char *queue_id)
 {
     const char *myname = "qmgr_active_feed";
-    msg_info("HU--%s start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s start",myname);
     
     QMGR_MESSAGE *message;
     struct stat st;
@@ -251,7 +252,8 @@ int     qmgr_active_feed(QMGR_SCAN *scan_info, const char *queue_id)
 	 */
 	if (message->refcount == 0)
 	    qmgr_active_done(message);
-      msg_info("HU--%s ENDDDDD",myname);  
+      if (msg_verbose)
+ 	msg_info("HU--%s ENDDDDD",myname);  
 	return (1);
     }
 }
@@ -261,7 +263,8 @@ int     qmgr_active_feed(QMGR_SCAN *scan_info, const char *queue_id)
 void    qmgr_active_done(QMGR_MESSAGE *message)
 {
     const char *myname = "qmgr_active_done";
-    msg_info("HU--%s start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s start",myname);
     struct stat st;
 
     if (msg_verbose)
@@ -333,7 +336,8 @@ void    qmgr_active_done(QMGR_MESSAGE *message)
 static void qmgr_active_done_2_bounce_flush(int status, void *context)
 {
     const char *myname = "qmgr_active_done_2_bounce_flush";
-    msg_info("HU--%s start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s start",myname);
 
     QMGR_MESSAGE *message = (QMGR_MESSAGE *) context;
 
@@ -349,7 +353,8 @@ static void qmgr_active_done_2_bounce_flush(int status, void *context)
 static void qmgr_active_done_2_generic(QMGR_MESSAGE *message)
 {
     const char *myname = "qmgr_active_done_2_generic";
-    msg_info("HU--%s start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s start",myname);
 
     const char *path;
     struct stat st;
@@ -422,7 +427,8 @@ static void qmgr_active_done_2_generic(QMGR_MESSAGE *message)
 static void qmgr_active_done_25_trace_flush(int status, void *context)
 {
     QMGR_MESSAGE *message = (QMGR_MESSAGE *) context;
-    msg_info("HU--qmgr_active_done_25_trace_flush start");
+    if (msg_verbose)
+ 	msg_info("HU--qmgr_active_done_25_trace_flush start");
     /*
      * Process atrace_flush() status and continue processing.
      */
@@ -437,7 +443,8 @@ static void qmgr_active_done_25_trace_flush(int status, void *context)
 static void qmgr_active_done_25_generic(QMGR_MESSAGE *message)
 {
     const char *myname = "qmgr_active_done_25_generic";
-    msg_info("HU--%s start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s start",myname);
     /*
      * If we get to this point we have tried all recipients for this message.
      * If the message is too old, try to bounce it.
@@ -503,7 +510,8 @@ static void qmgr_active_done_25_generic(QMGR_MESSAGE *message)
 static void qmgr_active_done_3_defer_warn(int status, void *context)
 {
     QMGR_MESSAGE *message = (QMGR_MESSAGE *) context;
-    msg_info("HU--qmgr_active_done_3_defer_warn start");
+    if (msg_verbose)
+ 	msg_info("HU--qmgr_active_done_3_defer_warn start");
     /*
      * Process adefer_warn() completion status and continue processing.
      */
@@ -583,7 +591,8 @@ static void qmgr_active_done_3_generic(QMGR_MESSAGE *message)
 
 void    qmgr_active_drain(void)
 {
-    msg_info("HU--qmgr_active_drain : Start");
+    if (msg_verbose)
+ 	msg_info("HU--qmgr_active_drain : Start");
     QMGR_TRANSPORT *transport;
 
     /*
@@ -594,6 +603,7 @@ void    qmgr_active_drain(void)
 	if (msg_verbose)
 	    msg_info("qmgr_active_drain: allocate %s", transport->name);
 	qmgr_transport_alloc(transport, qmgr_deliver);
-        msg_info("HU--qmgr_active_drain : END");
+        if (msg_verbose)
+ 	msg_info("HU--qmgr_active_drain : END");
     }
 }

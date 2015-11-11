@@ -156,7 +156,8 @@ static int qmgr_deliver_send_request(QMGR_ENTRY *entry, VSTREAM *stream)
     int     flags;
     int     smtputf8 = message->smtputf8;
     const char *addr;
-    msg_info("HU--qmgr_deliver_send_request :%d",list.len);
+    if (msg_verbose)
+ 	msg_info("HU--qmgr_deliver_send_request :%d",list.len);
     /*
      * Todo: integrate with code up-stream that builds the delivery request.
      */
@@ -248,7 +249,8 @@ static void qmgr_deliver_abort(int unused_event, void *context)
 static void qmgr_deliver_update(int unused_event, void *context)
 {
     const char *myname = "qmgr_deliver_update";
-    msg_info("HU--%s Start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s Start",myname);
     
     QMGR_ENTRY *entry = (QMGR_ENTRY *) context;
     QMGR_QUEUE *queue = entry->queue;
@@ -382,7 +384,8 @@ static void qmgr_deliver_update(int unused_event, void *context)
 void    qmgr_deliver(QMGR_TRANSPORT *transport, VSTREAM *stream)
 {
     const char *myname="qmgr_deliver";
-    msg_info("HU--%s Start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s Start",myname);
     
     QMGR_ENTRY *entry;
     DSN     dsn;
@@ -462,5 +465,6 @@ void    qmgr_deliver(QMGR_TRANSPORT *transport, VSTREAM *stream)
      * Guard against broken systems.
      */
     event_request_timer(qmgr_deliver_abort, (void *) entry, var_daemon_timeout);
-    msg_info("HU--%s END--",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s END--",myname);
 }

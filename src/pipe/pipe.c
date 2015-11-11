@@ -719,7 +719,8 @@ static ARGV *expand_argv(const char *service, char **argv,
 		 * This argument contains $recipient.
 		 */
                 if (msg_verbose)
-                    msg_info("HU--Orginal Recipient List %s:%d",rcpt_list->info[i].address,i);
+                    if (msg_verbose)
+ 	msg_info("HU--Orginal Recipient List %s:%d",rcpt_list->info[i].address,i);
 		if (state.expand_flag & PIPE_FLAG_RCPT) {
 		    morph_recipient(buf, rcpt_list->info[i].address, flags);
 		    dict_update(PIPE_DICT_TABLE, PIPE_DICT_RCPT, STR(buf));
@@ -1092,7 +1093,8 @@ static int eval_command_status(int command_status, char *service,
 static int deliver_message(DELIVER_REQUEST *request, char *service, char **argv)
 {
     const char *myname = "deliver_message";
-    msg_info("HU--%s Start",myname);
+    if (msg_verbose)
+ 	msg_info("HU--%s Start",myname);
     
     static PIPE_PARAMS conf;
     static PIPE_ATTR attr;
@@ -1376,7 +1378,8 @@ int     main(int argc, char **argv)
      */
     MAIL_VERSION_STAMP_ALLOCATE;
     if (msg_verbose)
-        msg_info("HU--Pipe main");
+        if (msg_verbose)
+ 	msg_info("HU--Pipe main");
     single_server_main(argc, argv, pipe_service,
 		       CA_MAIL_SERVER_TIME_TABLE(time_table),
 		       CA_MAIL_SERVER_STR_TABLE(str_table),
