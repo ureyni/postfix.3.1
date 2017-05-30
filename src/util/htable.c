@@ -278,7 +278,11 @@ void    htable_delete(HTABLE *table, const char *key, void (*free_fn) (void *))
 		return;
 	    }
 	}
-	msg_panic("htable_delete: unknown_key: \"%s\"", key);
+	/* msg_panic("htable_delete: unknown_key: \"%s\"", key);
+         * hasan ucak 
+         * multipli_domain_enable = yes 
+         */  
+	msg_warn("htable_delete: unknown_key: \"%s\"", key);
     }
 }
 
